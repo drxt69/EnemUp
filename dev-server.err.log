@@ -1,0 +1,124 @@
+⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ Found a change in next.config.ts. Restarting the server to apply the changes...
+⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⨯ TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EnemSourcesPage (src\app\(admin)\admin\enem-sources\page.tsx:24:29)
+  22 |   await requireRole("ADMIN");
+  23 |   const [importSources, drafts] = await Promise.all([
+> 24 |     prisma.enemImportSource.findMany({
+     |                             ^
+  25 |       orderBy: { createdAt: "desc" },
+  26 |       take: 10,
+  27 |     }), {
+  digest: '4126394262'
+}
+⨯ TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EnemSourcesPage (src\app\(admin)\admin\enem-sources\page.tsx:24:29)
+  22 |   await requireRole("ADMIN");
+  23 |   const [importSources, drafts] = await Promise.all([
+> 24 |     prisma.enemImportSource.findMany({
+     |                             ^
+  25 |       orderBy: { createdAt: "desc" },
+  26 |       take: 10,
+  27 |     }), {
+  digest: '1921341911'
+}
+⨯ TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EnemSourcesPage (src\app\(admin)\admin\enem-sources\page.tsx:24:29)
+  22 |   await requireRole("ADMIN");
+  23 |   const [importSources, drafts] = await Promise.all([
+> 24 |     prisma.enemImportSource.findMany({
+     |                             ^
+  25 |       orderBy: { createdAt: "desc" },
+  26 |       take: 10,
+  27 |     }), {
+  digest: '4126394262'
+}
+⨯ TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EnemSourcesPage (src\app\(admin)\admin\enem-sources\page.tsx:24:29)
+  22 |   await requireRole("ADMIN");
+  23 |   const [importSources, drafts] = await Promise.all([
+> 24 |     prisma.enemImportSource.findMany({
+     |                             ^
+  25 |       orderBy: { createdAt: "desc" },
+  26 |       take: 10,
+  27 |     }), {
+  digest: '4126394262'
+}
+⨯ TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EnemSourcesPage (src\app\(admin)\admin\enem-sources\page.tsx:24:29)
+  22 |   await requireRole("ADMIN");
+  23 |   const [importSources, drafts] = await Promise.all([
+> 24 |     prisma.enemImportSource.findMany({
+     |                             ^
+  25 |       orderBy: { createdAt: "desc" },
+  26 |       take: 10,
+  27 |     }), {
+  digest: '1921341911'
+}
+⨯ TypeError: Cannot read properties of undefined (reading 'findMany')
+    at EnemSourcesPage (src\app\(admin)\admin\enem-sources\page.tsx:24:29)
+  22 |   await requireRole("ADMIN");
+  23 |   const [importSources, drafts] = await Promise.all([
+> 24 |     prisma.enemImportSource.findMany({
+     |                             ^
+  25 |       orderBy: { createdAt: "desc" },
+  26 |       take: 10,
+  27 |     }), {
+  digest: '4126394262'
+}
+⨯ Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.question.findMany()` invocation:
+
+
+The query parameter limit supported by your database is exceeded.
+    at async PracticePage (src\app\(student)\practice\page.tsx:36:7)
+  34 |     essayCount,
+  35 |     finishedSimulationCount,
+> 36 |   ] = await Promise.all([
+     |       ^
+  37 |     prisma.area.findMany({ orderBy: { name: "asc" } }),
+  38 |     prisma.subject.findMany({ orderBy: { name: "asc" }, include: { area: true } }),
+  39 |     prisma.question.findMany({ {
+  code: 'P2029',
+  meta: { modelName: 'Question' },
+  clientVersion: '7.10.0',
+  digest: '1060341293'
+}
+⨯ Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.question.findMany()` invocation:
+
+
+The query parameter limit supported by your database is exceeded.
+    at async PracticePage (src\app\(student)\practice\page.tsx:36:7)
+  34 |     essayCount,
+  35 |     finishedSimulationCount,
+> 36 |   ] = await Promise.all([
+     |       ^
+  37 |     prisma.area.findMany({ orderBy: { name: "asc" } }),
+  38 |     prisma.subject.findMany({ orderBy: { name: "asc" }, include: { area: true } }),
+  39 |     prisma.question.findMany({ {
+  code: 'P2029',
+  meta: { modelName: 'Question' },
+  clientVersion: '7.10.0',
+  digest: '677848236'
+}
+⨯ Error [PrismaClientKnownRequestError]: 
+Invalid `prisma.question.findMany()` invocation:
+
+
+The query parameter limit supported by your database is exceeded.
+    at async PracticePage (src\app\(student)\practice\page.tsx:36:7)
+  34 |     essayCount,
+  35 |     finishedSimulationCount,
+> 36 |   ] = await Promise.all([
+     |       ^
+  37 |     prisma.area.findMany({ orderBy: { name: "asc" } }),
+  38 |     prisma.subject.findMany({ orderBy: { name: "asc" }, include: { area: true } }),
+  39 |     prisma.question.findMany({ {
+  code: 'P2029',
+  meta: { modelName: 'Question' },
+  clientVersion: '7.10.0',
+  digest: '1060341293'
+}

@@ -1,0 +1,546 @@
+[
+  {
+    "title": "ENEM_2009_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2009_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2009,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2009_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2009_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2009_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2009,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2009_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2009_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2009_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2009,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2009_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2009_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2009_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2009,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2009_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2010_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2010_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2010,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2010_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2010_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2010_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2010,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2010_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2010_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2010_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2010,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2010_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2010_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2010_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2010,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2010_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2011_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2011_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2011,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2011_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2011_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2011_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2011,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2011_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2011_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2011_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2011,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2011_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2011_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2011_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2011,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2011_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2012_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2012_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2012,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2012_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2012_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2012_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2012,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2012_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2012_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2012_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2012,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2012_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2012_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2012_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2012,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2012_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2013_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2013_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2013,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2013_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2013_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2013_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2013,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2013_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2013_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2013_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2013,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2013_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2013_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2013_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2013,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2013_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2014_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2014_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2014,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2014_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2014_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2014_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2014,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2014_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2014_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2014_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2014,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2014_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2014_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2014_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2014,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2014_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2015_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2015_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2015,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2015_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2015_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2015_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2015,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2015_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2015_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2015_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2015,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2015_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2015_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2015_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2015,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2015_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2016_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2016_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2016,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2016_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2016_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2016_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2016,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2016_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2016_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2016_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2016,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2016_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2016_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2016_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2016,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2016_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2017_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2017_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2017,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2017_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2017_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2017_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2017,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2017_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2017_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2017_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2017,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2017_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2017_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2017_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2017,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2017_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2018_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2018_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2018,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2018_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2018_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2018_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2018,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2018_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2018_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2018_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2018,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2018_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2018_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2018_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2018,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2018_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2019_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2019_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2019,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2019_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2019_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2019_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2019,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2019_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2019_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2019_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2019,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2019_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2019_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2019_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2019,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2019_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2020_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2020_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2020,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2020_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2020_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2020_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2020,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2020_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2020_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2020_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2020,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2020_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2020_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2020_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2020,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2020_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2021_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2021_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2021,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2021_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2021_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2021_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2021,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2021_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2021_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2021_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2021,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2021_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2021_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2021_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2021,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2021_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2022_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2022_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2022,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2022_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2022_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2022_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2022,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2022_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2022_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2022_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2022,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2022_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2022_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2022_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2022,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2022_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2023_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2023_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2023,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2023_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2023_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2023_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2023,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2023_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2023_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2023_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2023,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2023_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2023_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2023_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2023,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2023_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2024_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2024_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2024,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2024_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2024_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2024_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2024,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2024_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2024_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2024_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2024,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2024_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2024_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2024_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2024,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2024_2º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2025_1º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2025_1º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2025,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2025_1º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2025_1º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2025_1º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2025,
+    "day": 1,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2025_1º dia_prova.pdf"
+  },
+  {
+    "title": "ENEM_2025_2º dia_gabarito",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2025_2º dia_gabarito.pdf",
+    "assetType": "PDF_GABARITO",
+    "year": 2025,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2025_2º dia_gabarito.pdf"
+  },
+  {
+    "title": "ENEM_2025_2º dia_prova",
+    "sourceUrl": "local://ENEM.zip/data/enem-imports/local-archives/ENEM/ENEM/ENEM_2025_2º dia_prova.pdf",
+    "assetType": "PDF_PROVA",
+    "year": 2025,
+    "day": 2,
+    "localPath": "data\\enem-imports\\local-archives\\ENEM\\ENEM\\ENEM_2025_2º dia_prova.pdf"
+  }
+]

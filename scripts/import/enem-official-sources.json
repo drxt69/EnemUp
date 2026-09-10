@@ -1,0 +1,16 @@
+{
+  "provider": "INEP/Gov.br",
+  "legalStatus": "OFFICIAL_SOURCE",
+  "sources": [
+    {
+      "name": "Provas e gabaritos oficiais do ENEM",
+      "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos",
+      "notes": "Pagina oficial com provas e gabaritos por ano, atualizada pelo INEP."
+    },
+    {
+      "name": "Microdados do ENEM",
+      "url": "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/enem",
+      "notes": "Conjunto oficial de dados abertos do exame, util para metadados e analises."
+    }
+  ]
+}
