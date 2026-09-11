@@ -53,8 +53,14 @@ export default async function PracticePage({ searchParams }: PracticePageProps) 
   };
   const [areas, subjects, filteredQuestionCount, answerCount, correctCount, essayCount, finishedSimulationCount] =
     await Promise.all([
-    prisma.area.findMany({ orderBy: { name: "asc" } }),
-    prisma.subject.findMany({ orderBy: { name: "asc" }, include: { area: true } }),
+    prisma.area.findMany({
+      orderBy: { name: "asc" },
+      select: { id: true, name: true, slug: true },
+    }),
+    prisma.subject.findMany({
+      orderBy: { name: "asc" },
+      select: { id: true, name: true, slug: true },
+    }),
     prisma.question.count({ where: questionWhere }),
     prisma.studentAnswer.count({ where: { userId: user.id } }),
     prisma.studentAnswer.count({
@@ -78,18 +84,30 @@ export default async function PracticePage({ searchParams }: PracticePageProps) 
       id: params.questionId || undefined,
     },
     orderBy: { id: "asc" },
-    include: {
-      subject: true,
-      area: true,
-      alternatives: { orderBy: { sortOrder: "asc" } },
+    select: {
+      id: true,
+      statement: true,
+      difficulty: true,
+      subject: { select: { name: true } },
+      area: { select: { name: true } },
+      alternatives: {
+        orderBy: { sortOrder: "asc" },
+        select: { id: true, label: true, content: true, isCorrect: true },
+      },
     },
   }) ?? await prisma.question.findFirst({
     where: questionWhere,
     orderBy: { id: "asc" },
-    include: {
-      subject: true,
-      area: true,
-      alternatives: { orderBy: { sortOrder: "asc" } },
+    select: {
+      id: true,
+      statement: true,
+      difficulty: true,
+      subject: { select: { name: true } },
+      area: { select: { name: true } },
+      alternatives: {
+        orderBy: { sortOrder: "asc" },
+        select: { id: true, label: true, content: true, isCorrect: true },
+      },
     },
   });
   const nextQuestion = question
@@ -115,12 +133,20 @@ export default async function PracticePage({ searchParams }: PracticePageProps) 
   const feedbackAnswer = params.answerId
     ? await prisma.studentAnswer.findFirst({
         where: { id: params.answerId, userId: user.id },
-        include: {
-          alternative: true,
+        select: {
+          questionId: true,
+          alternativeId: true,
+          isCorrect: true,
+          alternative: { select: { label: true, content: true } },
           question: {
-            include: {
-              subject: true,
-              alternatives: { orderBy: { sortOrder: "asc" } },
+            select: {
+              statement: true,
+              explanation: true,
+              subject: { select: { name: true } },
+              alternatives: {
+                orderBy: { sortOrder: "asc" },
+                select: { label: true, content: true, isCorrect: true },
+              },
             },
           },
         },
@@ -197,9 +223,9 @@ export default async function PracticePage({ searchParams }: PracticePageProps) 
             Dificuldade
             <select name="difficulty" defaultValue={params.difficulty ?? ""} className="h-11 rounded-md border border-white/10 bg-slate-950 px-3 text-sm text-white">
               <option value="">Todas</option>
-              <option value="EASY">Facil</option>
-              <option value="MEDIUM">Media</option>
-              <option value="HARD">Dificil</option>
+              <option value="EASY">Fácil</option>
+              <option value="MEDIUM">Média</option>
+              <option value="HARD">Difícil</option>
             </select>
           </label>
           <button className="mt-auto inline-flex h-11 items-center justify-center gap-2 rounded-md bg-cyan-300 px-4 text-sm font-semibold text-slate-950 hover:bg-cyan-200">
@@ -276,7 +302,7 @@ export default async function PracticePage({ searchParams }: PracticePageProps) 
                   href={`/practice?${nextQuestionHref.toString()}`}
                   className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-md bg-cyan-300 px-4 text-sm font-semibold text-slate-950 hover:bg-cyan-200"
                 >
-                  Proxima questão
+                  Próxima questão
                   <ArrowRight aria-hidden className="h-4 w-4" />
                 </Link>
               </div>

@@ -374,6 +374,9 @@ model Question {
   @@index([isPublished])
   @@index([isPublished, subjectId])
   @@index([isPublished, areaId])
+  @@index([isPublished, difficulty])
+  @@index([isPublished, subjectId, difficulty, id])
+  @@index([isPublished, areaId, difficulty, id])
 }
 
 model Alternative {
@@ -423,6 +426,7 @@ model StudentAnswer {
   @@index([simulationRunId])
   @@index([userId, isCorrect])
   @@index([userId, answeredAt])
+  @@index([userId, questionId, answeredAt])
 }
 
 model Simulation {

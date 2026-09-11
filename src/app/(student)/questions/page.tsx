@@ -2,7 +2,6 @@ import Link from "next/link";
 import { CheckCircle2, Filter, Search, XCircle } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { requireQuestionAccess } from "@/lib/auth/subscription";
-import { buildQuestionFeedback } from "@/lib/ai/student-guidance";
 import { answerQuestionAction } from "@/modules/questions/actions";
 
 type QuestionsPageProps = {
@@ -42,64 +41,64 @@ export default async function QuestionsPage({ searchParams }: QuestionsPageProps
   const { user, hasSubscription, freeUsage } = await requireQuestionAccess();
   const params = await searchParams;
 
-  const [areas, subjects, questions, latestAnswers, publishedQuestionCount] = await Promise.all([
-    prisma.area.findMany({ orderBy: { name: "asc" } }),
-    prisma.subject.findMany({ orderBy: { name: "asc" }, include: { area: true } }),
-    prisma.question.findMany({
-      where: {
-        isPublished: true,
-        area: params.area ? { slug: params.area } : undefined,
-        subject: params.subject ? { slug: params.subject } : undefined,
-        difficulty: params.difficulty || undefined,
-        statement: params.q ? { contains: params.q } : undefined,
-      },
-      orderBy: { createdAt: "desc" },
-      include: {
-        area: true,
-        subject: true,
-        alternatives: { orderBy: { sortOrder: "asc" } },
-      },
-      take: 20,
+  const [areas, subjects, publishedQuestionCount] = await Promise.all([
+    prisma.area.findMany({
+      orderBy: { name: "asc" },
+      select: { id: true, name: true, slug: true },
     }),
-    prisma.studentAnswer.findMany({
-      where: { userId: user.id },
-      orderBy: { answeredAt: "desc" },
-      take: 50,
+    prisma.subject.findMany({
+      orderBy: { name: "asc" },
+      select: { id: true, name: true, slug: true },
     }),
     prisma.question.count({ where: { isPublished: true } }),
   ]);
 
+  const questions = await prisma.question.findMany({
+    where: {
+      isPublished: true,
+      area: params.area ? { slug: params.area } : undefined,
+      subject: params.subject ? { slug: params.subject } : undefined,
+      difficulty: params.difficulty || undefined,
+      statement: params.q ? { contains: params.q } : undefined,
+    },
+    orderBy: { createdAt: "desc" },
+    select: {
+      id: true,
+      statement: true,
+      difficulty: true,
+      explanation: true,
+      area: { select: { name: true } },
+      subject: { select: { name: true } },
+      alternatives: {
+        orderBy: { sortOrder: "asc" },
+        select: {
+          id: true,
+          label: true,
+          content: true,
+          isCorrect: true,
+        },
+      },
+    },
+    take: 12,
+  });
+  const questionIds = questions.map((question) => question.id);
+  const latestAnswers =
+    questionIds.length > 0
+      ? await prisma.studentAnswer.findMany({
+          where: { userId: user.id, questionId: { in: questionIds } },
+          orderBy: { answeredAt: "desc" },
+          distinct: ["questionId"],
+          select: {
+            id: true,
+            questionId: true,
+            alternativeId: true,
+            isCorrect: true,
+          },
+        })
+      : [];
+
   const answerByQuestion = new Map(
     latestAnswers.map((answer) => [answer.questionId, answer]),
-  );
-  const feedbackByQuestionId = new Map(
-    await Promise.all(
-      questions.map(async (question) => {
-        const lastAnswer = answerByQuestion.get(question.id);
-        const selectedAlternative = lastAnswer
-          ? question.alternatives.find((item) => item.id === lastAnswer.alternativeId)
-          : null;
-        const correctAlternative = question.alternatives.find((item) => item.isCorrect);
-
-        if (!lastAnswer) {
-          return [question.id, null] as const;
-        }
-
-        return [
-          question.id,
-          await buildQuestionFeedback({
-            subjectName: question.subject.name,
-            statement: question.statement,
-            selectedLabel: selectedAlternative?.label,
-            selectedContent: selectedAlternative?.content,
-            correctLabel: correctAlternative?.label,
-            correctContent: correctAlternative?.content,
-            isCorrect: lastAnswer.isCorrect,
-            explanation: question.explanation,
-          }),
-        ] as const;
-      }),
-    ),
   );
 
   return (
@@ -161,9 +160,9 @@ export default async function QuestionsPage({ searchParams }: QuestionsPageProps
             Dificuldade
             <select name="difficulty" defaultValue={params.difficulty ?? ""} className="h-11 rounded-md border border-white/10 bg-slate-950 px-3 text-sm text-white">
               <option value="">Todas</option>
-              <option value="EASY">Facil</option>
-              <option value="MEDIUM">Media</option>
-              <option value="HARD">Dificil</option>
+              <option value="EASY">Fácil</option>
+              <option value="MEDIUM">Média</option>
+              <option value="HARD">Difícil</option>
             </select>
           </label>
           <button className="mt-auto inline-flex h-11 items-center justify-center gap-2 rounded-md bg-cyan-300 px-4 text-sm font-semibold text-slate-950 hover:bg-cyan-200">
@@ -176,7 +175,6 @@ export default async function QuestionsPage({ searchParams }: QuestionsPageProps
           {questions.map((question) => {
             const lastAnswer = answerByQuestion.get(question.id);
             const correctAlternative = question.alternatives.find((item) => item.isCorrect);
-            const aiFeedback = feedbackByQuestionId.get(question.id);
 
             return (
               <article key={question.id} className="min-w-0 overflow-hidden rounded-lg border border-white/10 bg-white/8 p-4 sm:p-6">
@@ -223,7 +221,18 @@ export default async function QuestionsPage({ searchParams }: QuestionsPageProps
                 {lastAnswer ? (
                   <div className="mt-5 rounded-lg border border-white/10 bg-slate-950/70 p-5">
                     <h3 className="text-lg font-semibold text-white">Explicação da resposta</h3>
-                    <p className="question-text mt-3 whitespace-pre-line text-sm leading-7 text-slate-200">{aiFeedback?.text}</p>
+                    <p className="question-text mt-3 text-sm leading-7 text-slate-200">
+                      {lastAnswer.isCorrect ? "Você acertou." : `Você errou. A correta é ${correctAlternative?.label ?? "a alternativa indicada"}.`}{" "}
+                      Para uma explicação detalhada com IA, abra esta questão no modo missão.
+                    </p>
+                    <Link
+                      href={`/practice?questionId=${question.id}${
+                        params.subject ? `&subject=${params.subject}` : ""
+                      }`}
+                      className="mt-4 inline-flex h-10 items-center justify-center rounded-md bg-cyan-300 px-4 text-sm font-semibold text-slate-950 hover:bg-cyan-200"
+                    >
+                      Ver explicação completa
+                    </Link>
                   </div>
                 ) : null}
               </article>

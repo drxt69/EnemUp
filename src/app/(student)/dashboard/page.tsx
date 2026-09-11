@@ -31,7 +31,7 @@ function getAccuracy(correct: number, total: number) {
 function getPriorityLabel(answered: number, accuracyValue: number) {
   if (answered === 0) return "Começar";
   if (accuracyValue < 50) return "Prioridade alta";
-  if (accuracyValue < 70) return "Reforcar";
+  if (accuracyValue < 70) return "Reforçar";
   return "Manter ritmo";
 }
 
@@ -63,6 +63,12 @@ function getCheckInStreak(records: { recordedAt: Date }[]) {
   return streak;
 }
 
+type SubjectAnswerStat = {
+  subjectId: string;
+  answered: bigint;
+  correct: bigint;
+};
+
 export default async function DashboardPage() {
   const user = await requireActiveSubscription();
   const [
@@ -75,7 +81,7 @@ export default async function DashboardPage() {
     recentAnswers,
     progressRecords,
     subjects,
-    allAnswers,
+    subjectAnswerStats,
     publishedQuestionsBySubject,
     checkInCount,
     recentCheckInRecords,
@@ -105,13 +111,19 @@ export default async function DashboardPage() {
       where: { userId: user.id },
       orderBy: { answeredAt: "desc" },
       take: 5,
-      include: {
-        alternative: true,
+      select: {
+        id: true,
+        isCorrect: true,
+        alternative: { select: { label: true } },
         question: {
-          include: {
-            subject: true,
-            area: true,
-            alternatives: true,
+          select: {
+            subject: { select: { name: true } },
+            area: { select: { name: true } },
+            alternatives: {
+              where: { isCorrect: true },
+              take: 1,
+              select: { label: true },
+            },
           },
         },
       },
@@ -123,18 +135,23 @@ export default async function DashboardPage() {
     }),
     prisma.subject.findMany({
       orderBy: { name: "asc" },
-      include: { area: true },
-    }),
-    prisma.studentAnswer.findMany({
-      where: { userId: user.id },
-      include: {
-        question: {
-          select: {
-            subjectId: true,
-          },
-        },
+      select: {
+        id: true,
+        name: true,
+        slug: true,
+        area: { select: { name: true, slug: true } },
       },
     }),
+    prisma.$queryRaw<SubjectAnswerStat[]>`
+      SELECT
+        q."subjectId",
+        COUNT(sa."id") AS answered,
+        COALESCE(SUM(CASE WHEN sa."isCorrect" THEN 1 ELSE 0 END), 0) AS correct
+      FROM "StudentAnswer" sa
+      INNER JOIN "Question" q ON q."id" = sa."questionId"
+      WHERE sa."userId" = ${user.id}
+      GROUP BY q."subjectId"
+    `,
     prisma.question.groupBy({
       by: ["subjectId"],
       where: { isPublished: true },
@@ -189,7 +206,7 @@ export default async function DashboardPage() {
       detail: answerCount > 0 ? "Calculado pelas respostas" : "Aguardando respostas",
     },
     {
-      label: "Redacoes",
+      label: "Redações",
       value: essayCount.toString(),
       icon: PenTool,
       detail: "Envios no histórico",
@@ -204,13 +221,20 @@ export default async function DashboardPage() {
   const publishedBySubject = new Map(
     publishedQuestionsBySubject.map((item) => [item.subjectId, item._count._all]),
   );
+  const answersBySubject = new Map(
+    subjectAnswerStats.map((item) => [
+      item.subjectId,
+      {
+        answered: Number(item.answered),
+        correct: Number(item.correct),
+      },
+    ]),
+  );
   const subjectPerformance = subjects
     .map((subject) => {
-      const subjectAnswers = allAnswers.filter(
-        (answer) => answer.question.subjectId === subject.id,
-      );
-      const answered = subjectAnswers.length;
-      const correct = subjectAnswers.filter((answer) => answer.isCorrect).length;
+      const subjectStats = answersBySubject.get(subject.id);
+      const answered = subjectStats?.answered ?? 0;
+      const correct = subjectStats?.correct ?? 0;
       const wrong = answered - correct;
       const subjectAccuracy = getAccuracy(correct, answered);
 
@@ -269,7 +293,7 @@ export default async function DashboardPage() {
               <div className="flex items-center gap-3">
                 <Trophy aria-hidden className="h-7 w-7 text-amber-200" />
                 <h2 className="text-2xl font-semibold text-white">
-                  Evolucao do aluno: Nível {studentProgress.level}
+                  Evolução do aluno: Nível {studentProgress.level}
                 </h2>
               </div>
               <p className="mt-2 text-sm text-slate-300">
@@ -549,7 +573,7 @@ export default async function DashboardPage() {
                       </strong>
                       . Correta:{" "}
                       <strong className="text-white">
-                        {answer.question.alternatives.find((item) => item.isCorrect)?.label ?? "em revisão"}
+                        {answer.question.alternatives[0]?.label ?? "em revisão"}
                       </strong>
                       .
                     </p>
