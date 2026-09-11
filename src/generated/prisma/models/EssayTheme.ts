@@ -1222,6 +1222,7 @@ export type EssayThemeCreateManyArgs<ExtArgs extends runtime.Types.Extensions.In
    * The data used to create many EssayThemes.
    */
   data: Prisma.EssayThemeCreateManyInput | Prisma.EssayThemeCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1240,6 +1241,7 @@ export type EssayThemeCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Exte
    * The data used to create many EssayThemes.
    */
   data: Prisma.EssayThemeCreateManyInput | Prisma.EssayThemeCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**

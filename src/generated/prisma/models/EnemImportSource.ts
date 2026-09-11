@@ -1330,6 +1330,7 @@ export type EnemImportSourceCreateManyArgs<ExtArgs extends runtime.Types.Extensi
    * The data used to create many EnemImportSources.
    */
   data: Prisma.EnemImportSourceCreateManyInput | Prisma.EnemImportSourceCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1348,6 +1349,7 @@ export type EnemImportSourceCreateManyAndReturnArgs<ExtArgs extends runtime.Type
    * The data used to create many EnemImportSources.
    */
   data: Prisma.EnemImportSourceCreateManyInput | Prisma.EnemImportSourceCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**

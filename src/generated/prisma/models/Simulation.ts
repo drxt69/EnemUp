@@ -1485,6 +1485,7 @@ export type SimulationCreateManyArgs<ExtArgs extends runtime.Types.Extensions.In
    * The data used to create many Simulations.
    */
   data: Prisma.SimulationCreateManyInput | Prisma.SimulationCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1503,6 +1504,7 @@ export type SimulationCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Exte
    * The data used to create many Simulations.
    */
   data: Prisma.SimulationCreateManyInput | Prisma.SimulationCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**

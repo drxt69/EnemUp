@@ -432,6 +432,7 @@ export type StudyScheduleCreateOrConnectWithoutStudyPlanInput = {
 
 export type StudyScheduleCreateManyStudyPlanInputEnvelope = {
   data: Prisma.StudyScheduleCreateManyStudyPlanInput | Prisma.StudyScheduleCreateManyStudyPlanInput[]
+  skipDuplicates?: boolean
 }
 
 export type StudyScheduleUpsertWithWhereUniqueWithoutStudyPlanInput = {
@@ -1311,6 +1312,7 @@ export type StudyScheduleCreateManyArgs<ExtArgs extends runtime.Types.Extensions
    * The data used to create many StudySchedules.
    */
   data: Prisma.StudyScheduleCreateManyInput | Prisma.StudyScheduleCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1329,6 +1331,7 @@ export type StudyScheduleCreateManyAndReturnArgs<ExtArgs extends runtime.Types.E
    * The data used to create many StudySchedules.
    */
   data: Prisma.StudyScheduleCreateManyInput | Prisma.StudyScheduleCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

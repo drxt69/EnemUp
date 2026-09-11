@@ -664,6 +664,7 @@ export type SimulationRunCreateOrConnectWithoutUserInput = {
 
 export type SimulationRunCreateManyUserInputEnvelope = {
   data: Prisma.SimulationRunCreateManyUserInput | Prisma.SimulationRunCreateManyUserInput[]
+  skipDuplicates?: boolean
 }
 
 export type SimulationRunUpsertWithWhereUniqueWithoutUserInput = {
@@ -805,6 +806,7 @@ export type SimulationRunCreateOrConnectWithoutSimulationInput = {
 
 export type SimulationRunCreateManySimulationInputEnvelope = {
   data: Prisma.SimulationRunCreateManySimulationInput | Prisma.SimulationRunCreateManySimulationInput[]
+  skipDuplicates?: boolean
 }
 
 export type SimulationRunUpsertWithWhereUniqueWithoutSimulationInput = {
@@ -1798,6 +1800,7 @@ export type SimulationRunCreateManyArgs<ExtArgs extends runtime.Types.Extensions
    * The data used to create many SimulationRuns.
    */
   data: Prisma.SimulationRunCreateManyInput | Prisma.SimulationRunCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1816,6 +1819,7 @@ export type SimulationRunCreateManyAndReturnArgs<ExtArgs extends runtime.Types.E
    * The data used to create many SimulationRuns.
    */
   data: Prisma.SimulationRunCreateManyInput | Prisma.SimulationRunCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

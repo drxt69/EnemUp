@@ -668,6 +668,7 @@ export type StudyTaskCreateOrConnectWithoutTopicInput = {
 
 export type StudyTaskCreateManyTopicInputEnvelope = {
   data: Prisma.StudyTaskCreateManyTopicInput | Prisma.StudyTaskCreateManyTopicInput[]
+  skipDuplicates?: boolean
 }
 
 export type StudyTaskUpsertWithWhereUniqueWithoutTopicInput = {
@@ -736,6 +737,7 @@ export type StudyTaskCreateOrConnectWithoutSimulationInput = {
 
 export type StudyTaskCreateManySimulationInputEnvelope = {
   data: Prisma.StudyTaskCreateManySimulationInput | Prisma.StudyTaskCreateManySimulationInput[]
+  skipDuplicates?: boolean
 }
 
 export type StudyTaskUpsertWithWhereUniqueWithoutSimulationInput = {
@@ -787,6 +789,7 @@ export type StudyTaskCreateOrConnectWithoutScheduleInput = {
 
 export type StudyTaskCreateManyScheduleInputEnvelope = {
   data: Prisma.StudyTaskCreateManyScheduleInput | Prisma.StudyTaskCreateManyScheduleInput[]
+  skipDuplicates?: boolean
 }
 
 export type StudyTaskUpsertWithWhereUniqueWithoutScheduleInput = {
@@ -1735,6 +1738,7 @@ export type StudyTaskCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Int
    * The data used to create many StudyTasks.
    */
   data: Prisma.StudyTaskCreateManyInput | Prisma.StudyTaskCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1753,6 +1757,7 @@ export type StudyTaskCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Exten
    * The data used to create many StudyTasks.
    */
   data: Prisma.StudyTaskCreateManyInput | Prisma.StudyTaskCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

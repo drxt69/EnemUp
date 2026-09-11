@@ -487,6 +487,7 @@ export type TopicCreateOrConnectWithoutSubjectInput = {
 
 export type TopicCreateManySubjectInputEnvelope = {
   data: Prisma.TopicCreateManySubjectInput | Prisma.TopicCreateManySubjectInput[]
+  skipDuplicates?: boolean
 }
 
 export type TopicUpsertWithWhereUniqueWithoutSubjectInput = {
@@ -1524,6 +1525,7 @@ export type TopicCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Interna
    * The data used to create many Topics.
    */
   data: Prisma.TopicCreateManyInput | Prisma.TopicCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1542,6 +1544,7 @@ export type TopicCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extension
    * The data used to create many Topics.
    */
   data: Prisma.TopicCreateManyInput | Prisma.TopicCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

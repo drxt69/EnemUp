@@ -472,6 +472,7 @@ export type PdfMaterialCreateOrConnectWithoutMaterialInput = {
 
 export type PdfMaterialCreateManyMaterialInputEnvelope = {
   data: Prisma.PdfMaterialCreateManyMaterialInput | Prisma.PdfMaterialCreateManyMaterialInput[]
+  skipDuplicates?: boolean
 }
 
 export type PdfMaterialUpsertWithWhereUniqueWithoutMaterialInput = {
@@ -1273,6 +1274,7 @@ export type PdfMaterialCreateManyArgs<ExtArgs extends runtime.Types.Extensions.I
    * The data used to create many PdfMaterials.
    */
   data: Prisma.PdfMaterialCreateManyInput | Prisma.PdfMaterialCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1291,6 +1293,7 @@ export type PdfMaterialCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Ext
    * The data used to create many PdfMaterials.
    */
   data: Prisma.PdfMaterialCreateManyInput | Prisma.PdfMaterialCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

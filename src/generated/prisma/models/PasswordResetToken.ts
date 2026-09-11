@@ -1016,6 +1016,7 @@ export type PasswordResetTokenCreateManyArgs<ExtArgs extends runtime.Types.Exten
    * The data used to create many PasswordResetTokens.
    */
   data: Prisma.PasswordResetTokenCreateManyInput | Prisma.PasswordResetTokenCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1034,6 +1035,7 @@ export type PasswordResetTokenCreateManyAndReturnArgs<ExtArgs extends runtime.Ty
    * The data used to create many PasswordResetTokens.
    */
   data: Prisma.PasswordResetTokenCreateManyInput | Prisma.PasswordResetTokenCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**

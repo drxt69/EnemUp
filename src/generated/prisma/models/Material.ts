@@ -528,6 +528,7 @@ export type MaterialCreateOrConnectWithoutTopicInput = {
 
 export type MaterialCreateManyTopicInputEnvelope = {
   data: Prisma.MaterialCreateManyTopicInput | Prisma.MaterialCreateManyTopicInput[]
+  skipDuplicates?: boolean
 }
 
 export type MaterialUpsertWithWhereUniqueWithoutTopicInput = {
@@ -1467,6 +1468,7 @@ export type MaterialCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Inte
    * The data used to create many Materials.
    */
   data: Prisma.MaterialCreateManyInput | Prisma.MaterialCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1485,6 +1487,7 @@ export type MaterialCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extens
    * The data used to create many Materials.
    */
   data: Prisma.MaterialCreateManyInput | Prisma.MaterialCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

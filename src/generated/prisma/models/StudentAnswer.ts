@@ -628,6 +628,7 @@ export type StudentAnswerCreateOrConnectWithoutUserInput = {
 
 export type StudentAnswerCreateManyUserInputEnvelope = {
   data: Prisma.StudentAnswerCreateManyUserInput | Prisma.StudentAnswerCreateManyUserInput[]
+  skipDuplicates?: boolean
 }
 
 export type StudentAnswerUpsertWithWhereUniqueWithoutUserInput = {
@@ -687,6 +688,7 @@ export type StudentAnswerCreateOrConnectWithoutQuestionInput = {
 
 export type StudentAnswerCreateManyQuestionInputEnvelope = {
   data: Prisma.StudentAnswerCreateManyQuestionInput | Prisma.StudentAnswerCreateManyQuestionInput[]
+  skipDuplicates?: boolean
 }
 
 export type StudentAnswerUpsertWithWhereUniqueWithoutQuestionInput = {
@@ -732,6 +734,7 @@ export type StudentAnswerCreateOrConnectWithoutAlternativeInput = {
 
 export type StudentAnswerCreateManyAlternativeInputEnvelope = {
   data: Prisma.StudentAnswerCreateManyAlternativeInput | Prisma.StudentAnswerCreateManyAlternativeInput[]
+  skipDuplicates?: boolean
 }
 
 export type StudentAnswerUpsertWithWhereUniqueWithoutAlternativeInput = {
@@ -777,6 +780,7 @@ export type StudentAnswerCreateOrConnectWithoutSimulationRunInput = {
 
 export type StudentAnswerCreateManySimulationRunInputEnvelope = {
   data: Prisma.StudentAnswerCreateManySimulationRunInput | Prisma.StudentAnswerCreateManySimulationRunInput[]
+  skipDuplicates?: boolean
 }
 
 export type StudentAnswerUpsertWithWhereUniqueWithoutSimulationRunInput = {
@@ -1719,6 +1723,7 @@ export type StudentAnswerCreateManyArgs<ExtArgs extends runtime.Types.Extensions
    * The data used to create many StudentAnswers.
    */
   data: Prisma.StudentAnswerCreateManyInput | Prisma.StudentAnswerCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1737,6 +1742,7 @@ export type StudentAnswerCreateManyAndReturnArgs<ExtArgs extends runtime.Types.E
    * The data used to create many StudentAnswers.
    */
   data: Prisma.StudentAnswerCreateManyInput | Prisma.StudentAnswerCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

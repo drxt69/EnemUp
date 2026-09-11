@@ -474,6 +474,7 @@ export type EssayCompetencyScoreCreateOrConnectWithoutCorrectionInput = {
 
 export type EssayCompetencyScoreCreateManyCorrectionInputEnvelope = {
   data: Prisma.EssayCompetencyScoreCreateManyCorrectionInput | Prisma.EssayCompetencyScoreCreateManyCorrectionInput[]
+  skipDuplicates?: boolean
 }
 
 export type EssayCompetencyScoreUpsertWithWhereUniqueWithoutCorrectionInput = {
@@ -524,6 +525,7 @@ export type EssayCompetencyScoreCreateOrConnectWithoutCompetencyInput = {
 
 export type EssayCompetencyScoreCreateManyCompetencyInputEnvelope = {
   data: Prisma.EssayCompetencyScoreCreateManyCompetencyInput | Prisma.EssayCompetencyScoreCreateManyCompetencyInput[]
+  skipDuplicates?: boolean
 }
 
 export type EssayCompetencyScoreUpsertWithWhereUniqueWithoutCompetencyInput = {
@@ -1328,6 +1330,7 @@ export type EssayCompetencyScoreCreateManyArgs<ExtArgs extends runtime.Types.Ext
    * The data used to create many EssayCompetencyScores.
    */
   data: Prisma.EssayCompetencyScoreCreateManyInput | Prisma.EssayCompetencyScoreCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1346,6 +1349,7 @@ export type EssayCompetencyScoreCreateManyAndReturnArgs<ExtArgs extends runtime.
    * The data used to create many EssayCompetencyScores.
    */
   data: Prisma.EssayCompetencyScoreCreateManyInput | Prisma.EssayCompetencyScoreCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

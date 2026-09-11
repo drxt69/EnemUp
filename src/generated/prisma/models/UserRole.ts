@@ -406,6 +406,7 @@ export type UserRoleCreateOrConnectWithoutUserInput = {
 
 export type UserRoleCreateManyUserInputEnvelope = {
   data: Prisma.UserRoleCreateManyUserInput | Prisma.UserRoleCreateManyUserInput[]
+  skipDuplicates?: boolean
 }
 
 export type UserRoleUpsertWithWhereUniqueWithoutUserInput = {
@@ -453,6 +454,7 @@ export type UserRoleCreateOrConnectWithoutRoleInput = {
 
 export type UserRoleCreateManyRoleInputEnvelope = {
   data: Prisma.UserRoleCreateManyRoleInput | Prisma.UserRoleCreateManyRoleInput[]
+  skipDuplicates?: boolean
 }
 
 export type UserRoleUpsertWithWhereUniqueWithoutRoleInput = {
@@ -1243,6 +1245,7 @@ export type UserRoleCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Inte
    * The data used to create many UserRoles.
    */
   data: Prisma.UserRoleCreateManyInput | Prisma.UserRoleCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1261,6 +1264,7 @@ export type UserRoleCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extens
    * The data used to create many UserRoles.
    */
   data: Prisma.UserRoleCreateManyInput | Prisma.UserRoleCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

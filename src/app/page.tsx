@@ -26,6 +26,8 @@ import { LandingEvents } from "@/components/analytics/landing-events";
 import { AppLogo } from "@/components/brand/app-logo";
 import { prisma } from "@/lib/prisma";
 
+export const dynamic = "force-dynamic";
+
 type IconType = ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
 
 const navItems = [

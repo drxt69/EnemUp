@@ -504,6 +504,7 @@ export type ProgressRecordCreateOrConnectWithoutUserInput = {
 
 export type ProgressRecordCreateManyUserInputEnvelope = {
   data: Prisma.ProgressRecordCreateManyUserInput | Prisma.ProgressRecordCreateManyUserInput[]
+  skipDuplicates?: boolean
 }
 
 export type ProgressRecordUpsertWithWhereUniqueWithoutUserInput = {
@@ -1316,6 +1317,7 @@ export type ProgressRecordCreateManyArgs<ExtArgs extends runtime.Types.Extension
    * The data used to create many ProgressRecords.
    */
   data: Prisma.ProgressRecordCreateManyInput | Prisma.ProgressRecordCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1334,6 +1336,7 @@ export type ProgressRecordCreateManyAndReturnArgs<ExtArgs extends runtime.Types.
    * The data used to create many ProgressRecords.
    */
   data: Prisma.ProgressRecordCreateManyInput | Prisma.ProgressRecordCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

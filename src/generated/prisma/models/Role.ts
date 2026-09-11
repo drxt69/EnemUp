@@ -1216,6 +1216,7 @@ export type RoleCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Internal
    * The data used to create many Roles.
    */
   data: Prisma.RoleCreateManyInput | Prisma.RoleCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1234,6 +1235,7 @@ export type RoleCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensions
    * The data used to create many Roles.
    */
   data: Prisma.RoleCreateManyInput | Prisma.RoleCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**

@@ -1208,6 +1208,7 @@ export type EssayCompetencyCreateManyArgs<ExtArgs extends runtime.Types.Extensio
    * The data used to create many EssayCompetencies.
    */
   data: Prisma.EssayCompetencyCreateManyInput | Prisma.EssayCompetencyCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1226,6 +1227,7 @@ export type EssayCompetencyCreateManyAndReturnArgs<ExtArgs extends runtime.Types
    * The data used to create many EssayCompetencies.
    */
   data: Prisma.EssayCompetencyCreateManyInput | Prisma.EssayCompetencyCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**

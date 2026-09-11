@@ -1195,6 +1195,7 @@ export type ExamYearCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Inte
    * The data used to create many ExamYears.
    */
   data: Prisma.ExamYearCreateManyInput | Prisma.ExamYearCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1213,6 +1214,7 @@ export type ExamYearCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extens
    * The data used to create many ExamYears.
    */
   data: Prisma.ExamYearCreateManyInput | Prisma.ExamYearCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**

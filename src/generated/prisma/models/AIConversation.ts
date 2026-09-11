@@ -456,6 +456,7 @@ export type AIConversationCreateOrConnectWithoutUserInput = {
 
 export type AIConversationCreateManyUserInputEnvelope = {
   data: Prisma.AIConversationCreateManyUserInput | Prisma.AIConversationCreateManyUserInput[]
+  skipDuplicates?: boolean
 }
 
 export type AIConversationUpsertWithWhereUniqueWithoutUserInput = {
@@ -1350,6 +1351,7 @@ export type AIConversationCreateManyArgs<ExtArgs extends runtime.Types.Extension
    * The data used to create many AIConversations.
    */
   data: Prisma.AIConversationCreateManyInput | Prisma.AIConversationCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1368,6 +1370,7 @@ export type AIConversationCreateManyAndReturnArgs<ExtArgs extends runtime.Types.
    * The data used to create many AIConversations.
    */
   data: Prisma.AIConversationCreateManyInput | Prisma.AIConversationCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

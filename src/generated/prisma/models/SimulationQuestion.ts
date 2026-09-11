@@ -450,6 +450,7 @@ export type SimulationQuestionCreateOrConnectWithoutQuestionInput = {
 
 export type SimulationQuestionCreateManyQuestionInputEnvelope = {
   data: Prisma.SimulationQuestionCreateManyQuestionInput | Prisma.SimulationQuestionCreateManyQuestionInput[]
+  skipDuplicates?: boolean
 }
 
 export type SimulationQuestionUpsertWithWhereUniqueWithoutQuestionInput = {
@@ -497,6 +498,7 @@ export type SimulationQuestionCreateOrConnectWithoutSimulationInput = {
 
 export type SimulationQuestionCreateManySimulationInputEnvelope = {
   data: Prisma.SimulationQuestionCreateManySimulationInput | Prisma.SimulationQuestionCreateManySimulationInput[]
+  skipDuplicates?: boolean
 }
 
 export type SimulationQuestionUpsertWithWhereUniqueWithoutSimulationInput = {
@@ -1287,6 +1289,7 @@ export type SimulationQuestionCreateManyArgs<ExtArgs extends runtime.Types.Exten
    * The data used to create many SimulationQuestions.
    */
   data: Prisma.SimulationQuestionCreateManyInput | Prisma.SimulationQuestionCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1305,6 +1308,7 @@ export type SimulationQuestionCreateManyAndReturnArgs<ExtArgs extends runtime.Ty
    * The data used to create many SimulationQuestions.
    */
   data: Prisma.SimulationQuestionCreateManyInput | Prisma.SimulationQuestionCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

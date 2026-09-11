@@ -690,6 +690,7 @@ export type QuestionImportDraftCreateOrConnectWithoutSourceInput = {
 
 export type QuestionImportDraftCreateManySourceInputEnvelope = {
   data: Prisma.QuestionImportDraftCreateManySourceInput | Prisma.QuestionImportDraftCreateManySourceInput[]
+  skipDuplicates?: boolean
 }
 
 export type QuestionImportDraftUpsertWithWhereUniqueWithoutSourceInput = {
@@ -1579,6 +1580,7 @@ export type QuestionImportDraftCreateManyArgs<ExtArgs extends runtime.Types.Exte
    * The data used to create many QuestionImportDrafts.
    */
   data: Prisma.QuestionImportDraftCreateManyInput | Prisma.QuestionImportDraftCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1597,6 +1599,7 @@ export type QuestionImportDraftCreateManyAndReturnArgs<ExtArgs extends runtime.T
    * The data used to create many QuestionImportDrafts.
    */
   data: Prisma.QuestionImportDraftCreateManyInput | Prisma.QuestionImportDraftCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

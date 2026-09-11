@@ -508,6 +508,7 @@ export type AlternativeCreateOrConnectWithoutQuestionInput = {
 
 export type AlternativeCreateManyQuestionInputEnvelope = {
   data: Prisma.AlternativeCreateManyQuestionInput | Prisma.AlternativeCreateManyQuestionInput[]
+  skipDuplicates?: boolean
 }
 
 export type AlternativeUpsertWithWhereUniqueWithoutQuestionInput = {
@@ -1402,6 +1403,7 @@ export type AlternativeCreateManyArgs<ExtArgs extends runtime.Types.Extensions.I
    * The data used to create many Alternatives.
    */
   data: Prisma.AlternativeCreateManyInput | Prisma.AlternativeCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1420,6 +1422,7 @@ export type AlternativeCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Ext
    * The data used to create many Alternatives.
    */
   data: Prisma.AlternativeCreateManyInput | Prisma.AlternativeCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

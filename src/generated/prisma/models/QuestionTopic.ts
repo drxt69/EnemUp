@@ -382,6 +382,7 @@ export type QuestionTopicCreateOrConnectWithoutTopicInput = {
 
 export type QuestionTopicCreateManyTopicInputEnvelope = {
   data: Prisma.QuestionTopicCreateManyTopicInput | Prisma.QuestionTopicCreateManyTopicInput[]
+  skipDuplicates?: boolean
 }
 
 export type QuestionTopicUpsertWithWhereUniqueWithoutTopicInput = {
@@ -426,6 +427,7 @@ export type QuestionTopicCreateOrConnectWithoutQuestionInput = {
 
 export type QuestionTopicCreateManyQuestionInputEnvelope = {
   data: Prisma.QuestionTopicCreateManyQuestionInput | Prisma.QuestionTopicCreateManyQuestionInput[]
+  skipDuplicates?: boolean
 }
 
 export type QuestionTopicUpsertWithWhereUniqueWithoutQuestionInput = {
@@ -1202,6 +1204,7 @@ export type QuestionTopicCreateManyArgs<ExtArgs extends runtime.Types.Extensions
    * The data used to create many QuestionTopics.
    */
   data: Prisma.QuestionTopicCreateManyInput | Prisma.QuestionTopicCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1220,6 +1223,7 @@ export type QuestionTopicCreateManyAndReturnArgs<ExtArgs extends runtime.Types.E
    * The data used to create many QuestionTopics.
    */
   data: Prisma.QuestionTopicCreateManyInput | Prisma.QuestionTopicCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

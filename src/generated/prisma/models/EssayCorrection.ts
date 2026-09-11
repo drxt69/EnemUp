@@ -1375,6 +1375,7 @@ export type EssayCorrectionCreateManyArgs<ExtArgs extends runtime.Types.Extensio
    * The data used to create many EssayCorrections.
    */
   data: Prisma.EssayCorrectionCreateManyInput | Prisma.EssayCorrectionCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1393,6 +1394,7 @@ export type EssayCorrectionCreateManyAndReturnArgs<ExtArgs extends runtime.Types
    * The data used to create many EssayCorrections.
    */
   data: Prisma.EssayCorrectionCreateManyInput | Prisma.EssayCorrectionCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

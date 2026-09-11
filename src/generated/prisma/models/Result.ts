@@ -1250,6 +1250,7 @@ export type ResultCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Intern
    * The data used to create many Results.
    */
   data: Prisma.ResultCreateManyInput | Prisma.ResultCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1268,6 +1269,7 @@ export type ResultCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensio
    * The data used to create many Results.
    */
   data: Prisma.ResultCreateManyInput | Prisma.ResultCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

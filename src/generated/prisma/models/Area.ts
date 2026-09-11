@@ -1216,6 +1216,7 @@ export type AreaCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Internal
    * The data used to create many Areas.
    */
   data: Prisma.AreaCreateManyInput | Prisma.AreaCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1234,6 +1235,7 @@ export type AreaCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensions
    * The data used to create many Areas.
    */
   data: Prisma.AreaCreateManyInput | Prisma.AreaCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**

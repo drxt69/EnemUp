@@ -524,6 +524,7 @@ export type EssaySubmissionCreateOrConnectWithoutUserInput = {
 
 export type EssaySubmissionCreateManyUserInputEnvelope = {
   data: Prisma.EssaySubmissionCreateManyUserInput | Prisma.EssaySubmissionCreateManyUserInput[]
+  skipDuplicates?: boolean
 }
 
 export type EssaySubmissionUpsertWithWhereUniqueWithoutUserInput = {
@@ -585,6 +586,7 @@ export type EssaySubmissionCreateOrConnectWithoutThemeInput = {
 
 export type EssaySubmissionCreateManyThemeInputEnvelope = {
   data: Prisma.EssaySubmissionCreateManyThemeInput | Prisma.EssaySubmissionCreateManyThemeInput[]
+  skipDuplicates?: boolean
 }
 
 export type EssaySubmissionUpsertWithWhereUniqueWithoutThemeInput = {
@@ -1499,6 +1501,7 @@ export type EssaySubmissionCreateManyArgs<ExtArgs extends runtime.Types.Extensio
    * The data used to create many EssaySubmissions.
    */
   data: Prisma.EssaySubmissionCreateManyInput | Prisma.EssaySubmissionCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1517,6 +1520,7 @@ export type EssaySubmissionCreateManyAndReturnArgs<ExtArgs extends runtime.Types
    * The data used to create many EssaySubmissions.
    */
   data: Prisma.EssaySubmissionCreateManyInput | Prisma.EssaySubmissionCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

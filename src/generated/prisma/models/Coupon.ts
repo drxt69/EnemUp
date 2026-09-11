@@ -610,6 +610,7 @@ export type CouponCreateOrConnectWithoutCreatedByInput = {
 
 export type CouponCreateManyCreatedByInputEnvelope = {
   data: Prisma.CouponCreateManyCreatedByInput | Prisma.CouponCreateManyCreatedByInput[]
+  skipDuplicates?: boolean
 }
 
 export type CouponUpsertWithWhereUniqueWithoutCreatedByInput = {
@@ -1466,6 +1467,7 @@ export type CouponCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Intern
    * The data used to create many Coupons.
    */
   data: Prisma.CouponCreateManyInput | Prisma.CouponCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1484,6 +1486,7 @@ export type CouponCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extensio
    * The data used to create many Coupons.
    */
   data: Prisma.CouponCreateManyInput | Prisma.CouponCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */

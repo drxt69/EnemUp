@@ -428,6 +428,7 @@ export type AdminLogCreateOrConnectWithoutActorInput = {
 
 export type AdminLogCreateManyActorInputEnvelope = {
   data: Prisma.AdminLogCreateManyActorInput | Prisma.AdminLogCreateManyActorInput[]
+  skipDuplicates?: boolean
 }
 
 export type AdminLogUpsertWithWhereUniqueWithoutActorInput = {
@@ -1229,6 +1230,7 @@ export type AdminLogCreateManyArgs<ExtArgs extends runtime.Types.Extensions.Inte
    * The data used to create many AdminLogs.
    */
   data: Prisma.AdminLogCreateManyInput | Prisma.AdminLogCreateManyInput[]
+  skipDuplicates?: boolean
 }
 
 /**
@@ -1247,6 +1249,7 @@ export type AdminLogCreateManyAndReturnArgs<ExtArgs extends runtime.Types.Extens
    * The data used to create many AdminLogs.
    */
   data: Prisma.AdminLogCreateManyInput | Prisma.AdminLogCreateManyInput[]
+  skipDuplicates?: boolean
   /**
    * Choose, which related nodes to fetch as well
    */
