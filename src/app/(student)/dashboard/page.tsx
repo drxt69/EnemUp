@@ -77,7 +77,8 @@ export default async function DashboardPage() {
     subjects,
     allAnswers,
     publishedQuestionsBySubject,
-    checkInRecords,
+    checkInCount,
+    recentCheckInRecords,
     todayCheckIn,
   ] = await Promise.all([
     prisma.studentAnswer.count({ where: { userId: user.id } }),
@@ -126,12 +127,10 @@ export default async function DashboardPage() {
     }),
     prisma.studentAnswer.findMany({
       where: { userId: user.id },
-      orderBy: { answeredAt: "desc" },
       include: {
         question: {
-          include: {
-            subject: true,
-            area: true,
+          select: {
+            subjectId: true,
           },
         },
       },
@@ -141,9 +140,13 @@ export default async function DashboardPage() {
       where: { isPublished: true },
       _count: { _all: true },
     }),
+    prisma.progressRecord.count({
+      where: { userId: user.id, metric: "DAILY_CHECKIN" },
+    }),
     prisma.progressRecord.findMany({
       where: { userId: user.id, metric: "DAILY_CHECKIN" },
       orderBy: { recordedAt: "desc" },
+      take: 60,
     }),
     prisma.progressRecord.findFirst({
       where: {
@@ -160,9 +163,9 @@ export default async function DashboardPage() {
     correctCount,
     essayCount,
     finishedSimulationCount,
-    dailyCheckInCount: checkInRecords.length,
+    dailyCheckInCount: checkInCount,
   });
-  const checkInStreak = getCheckInStreak(checkInRecords);
+  const checkInStreak = getCheckInStreak(recentCheckInRecords);
   const weakSignals = recentAnswers
     .filter((answer) => !answer.isCorrect)
     .map((answer) => answer.question.subject.name);

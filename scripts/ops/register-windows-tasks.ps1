@@ -4,7 +4,8 @@ $projectRoot = Resolve-Path (Join-Path $PSScriptRoot "..\..")
 $startScript = Join-Path $PSScriptRoot "start-enem-up.ps1"
 $watchdogScript = Join-Path $PSScriptRoot "watchdog-enem-up.ps1"
 
-$principal = New-ScheduledTaskPrincipal -UserId $env:USERNAME -LogonType Interactive -RunLevel Highest
+$currentUser = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+$principal = New-ScheduledTaskPrincipal -UserId $currentUser -LogonType Interactive -RunLevel Highest
 
 $startAction = New-ScheduledTaskAction `
   -Execute "powershell.exe" `
@@ -26,9 +27,11 @@ $watchdogAction = New-ScheduledTaskAction `
   -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$watchdogScript`"" `
   -WorkingDirectory $projectRoot
 
-$watchdogTrigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(1)
-$watchdogTrigger.Repetition.Interval = "PT5M"
-$watchdogTrigger.Repetition.Duration = "P3650D"
+$watchdogTrigger = New-ScheduledTaskTrigger `
+  -Once `
+  -At (Get-Date).AddMinutes(1) `
+  -RepetitionInterval (New-TimeSpan -Minutes 5) `
+  -RepetitionDuration (New-TimeSpan -Days 3650)
 
 Register-ScheduledTask `
   -TaskName "ENEM UP - monitor de disponibilidade" `

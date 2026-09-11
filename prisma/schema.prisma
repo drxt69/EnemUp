@@ -39,6 +39,7 @@ model User {
   @@index([role])
   @@index([status])
   @@index([createdAt])
+  @@index([status, role])
 }
 
 model Profile {
@@ -134,6 +135,7 @@ model Session {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
+  @@index([userId, expires])
 }
 
 model VerificationToken {
@@ -190,6 +192,7 @@ model Subscription {
 
   @@index([userId, status])
   @@index([providerSubscriptionId])
+  @@index([userId, status, currentPeriodEnd])
 }
 
 model Payment {
@@ -212,6 +215,7 @@ model Payment {
   @@index([userId])
   @@index([status])
   @@index([providerPaymentId])
+  @@index([userId, status, createdAt])
 }
 
 model Coupon {
@@ -368,6 +372,8 @@ model Question {
   @@index([subjectId])
   @@index([difficulty])
   @@index([isPublished])
+  @@index([isPublished, subjectId])
+  @@index([isPublished, areaId])
 }
 
 model Alternative {
@@ -415,6 +421,8 @@ model StudentAnswer {
   @@index([userId])
   @@index([questionId])
   @@index([simulationRunId])
+  @@index([userId, isCorrect])
+  @@index([userId, answeredAt])
 }
 
 model Simulation {
@@ -463,6 +471,7 @@ model SimulationRun {
 
   @@index([userId])
   @@index([simulationId])
+  @@index([userId, status])
 }
 
 model Result {
@@ -508,6 +517,7 @@ model EssaySubmission {
   @@index([userId])
   @@index([themeId])
   @@index([status])
+  @@index([userId, submittedAt])
 }
 
 model EssayCorrection {
@@ -619,6 +629,7 @@ model ProgressRecord {
   @@index([userId])
   @@index([metric])
   @@index([recordedAt])
+  @@index([userId, metric, recordedAt])
 }
 
 model Material {

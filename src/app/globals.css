@@ -502,6 +502,37 @@ textarea {
   }
 }
 
+@media (max-width: 640px), (pointer: coarse) {
+  .landing-aurora,
+  .landing-orbit-ring,
+  .landing-orbit-card,
+  .landing-orbit-core,
+  .landing-answer-option,
+  .landing-dashboard-tile {
+    animation-duration: 12s;
+  }
+
+  .landing-product-frame,
+  .landing-orbit-core,
+  .landing-orbit-card,
+  .landing-floating-panel,
+  .landing-cta {
+    box-shadow: 0 14px 34px rgba(2, 6, 23, 0.28);
+  }
+
+  .landing-orbit-card,
+  .landing-floating-panel {
+    backdrop-filter: none;
+  }
+
+  .landing-product-frame::after,
+  .landing-cta::after,
+  .landing-progress-fill::after,
+  .landing-xp-fill::after {
+    animation: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .landing-aurora,
   .landing-particle,
