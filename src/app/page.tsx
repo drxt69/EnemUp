@@ -25,6 +25,7 @@ import {
 import { LandingEvents } from "@/components/analytics/landing-events";
 import { AppLogo } from "@/components/brand/app-logo";
 import { prisma } from "@/lib/prisma";
+import type { PlanModel } from "@/generated/prisma/models/Plan";
 
 export const dynamic = "force-dynamic";
 
@@ -160,17 +161,69 @@ function getMonthlyEquivalent(cents: number) {
   return formatCurrency(Math.round(cents / 12));
 }
 
+const fallbackPlans: PlanModel[] = [
+  {
+    id: "monthly",
+    key: "monthly",
+    name: "Plano Mensal",
+    description: "Acesso premium mensal sem período de teste.",
+    priceCents: 1999,
+    currency: "BRL",
+    billingInterval: "MONTH",
+    trialDays: 0,
+    isActive: true,
+    createdAt: new Date(0),
+    updatedAt: new Date(0),
+  },
+  {
+    id: "annual",
+    key: "annual",
+    name: "Plano Anual",
+    description: "Acesso premium anual com melhor custo-benefício.",
+    priceCents: 9999,
+    currency: "BRL",
+    billingInterval: "YEAR",
+    trialDays: 0,
+    isActive: true,
+    createdAt: new Date(0),
+    updatedAt: new Date(0),
+  },
+];
+
+async function getLandingData() {
+  try {
+    const [publishedQuestionCount, simulationCount, essayThemeCount, plans] =
+      await Promise.all([
+        prisma.question.count({ where: { isPublished: true } }),
+        prisma.simulation.count({ where: { isPublished: true } }),
+        prisma.essayTheme.count({ where: { isPublished: true } }),
+        prisma.plan.findMany({
+          where: { isActive: true },
+          orderBy: { priceCents: "asc" },
+        }),
+      ]);
+
+    return {
+      publishedQuestionCount,
+      simulationCount,
+      essayThemeCount,
+      plans: plans.length > 0 ? plans : fallbackPlans,
+    };
+  } catch (error) {
+    console.error("Landing database fallback", error);
+
+    return {
+      publishedQuestionCount: 1500,
+      simulationCount: 1,
+      essayThemeCount: 2,
+      plans: fallbackPlans,
+    };
+  }
+}
+
 export default async function Home() {
-  const [publishedQuestionCount, simulationCount, essayThemeCount, plans] =
-    await Promise.all([
-      prisma.question.count({ where: { isPublished: true } }),
-      prisma.simulation.count({ where: { isPublished: true } }),
-      prisma.essayTheme.count({ where: { isPublished: true } }),
-      prisma.plan.findMany({
-        where: { isActive: true },
-        orderBy: { priceCents: "asc" },
-      }),
-    ]);
+  const { publishedQuestionCount, simulationCount, essayThemeCount, plans } =
+    await getLandingData();
 
   const monthlyPlan = plans.find((plan) => plan.billingInterval === "MONTH");
   const annualPlan = plans.find((plan) => plan.billingInterval === "YEAR");
