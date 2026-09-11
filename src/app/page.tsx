@@ -24,10 +24,18 @@ import {
 } from "lucide-react";
 import { LandingEvents } from "@/components/analytics/landing-events";
 import { AppLogo } from "@/components/brand/app-logo";
-import { prisma } from "@/lib/prisma";
-import type { PlanModel } from "@/generated/prisma/models/Plan";
 
-export const dynamic = "force-dynamic";
+type LandingPlan = {
+  id: string;
+  key: string;
+  name: string;
+  description: string;
+  priceCents: number;
+  currency: string;
+  billingInterval: "MONTH" | "YEAR";
+  trialDays: number;
+  isActive: boolean;
+};
 
 type IconType = ComponentType<{ className?: string; "aria-hidden"?: boolean }>;
 
@@ -161,7 +169,7 @@ function getMonthlyEquivalent(cents: number) {
   return formatCurrency(Math.round(cents / 12));
 }
 
-const fallbackPlans: PlanModel[] = [
+const plans: LandingPlan[] = [
   {
     id: "monthly",
     key: "monthly",
@@ -172,8 +180,6 @@ const fallbackPlans: PlanModel[] = [
     billingInterval: "MONTH",
     trialDays: 0,
     isActive: true,
-    createdAt: new Date(0),
-    updatedAt: new Date(0),
   },
   {
     id: "annual",
@@ -185,45 +191,13 @@ const fallbackPlans: PlanModel[] = [
     billingInterval: "YEAR",
     trialDays: 0,
     isActive: true,
-    createdAt: new Date(0),
-    updatedAt: new Date(0),
   },
 ];
 
-async function getLandingData() {
-  try {
-    const [publishedQuestionCount, simulationCount, essayThemeCount, plans] =
-      await Promise.all([
-        prisma.question.count({ where: { isPublished: true } }),
-        prisma.simulation.count({ where: { isPublished: true } }),
-        prisma.essayTheme.count({ where: { isPublished: true } }),
-        prisma.plan.findMany({
-          where: { isActive: true },
-          orderBy: { priceCents: "asc" },
-        }),
-      ]);
-
-    return {
-      publishedQuestionCount,
-      simulationCount,
-      essayThemeCount,
-      plans: plans.length > 0 ? plans : fallbackPlans,
-    };
-  } catch (error) {
-    console.error("Landing database fallback", error);
-
-    return {
-      publishedQuestionCount: 1500,
-      simulationCount: 1,
-      essayThemeCount: 2,
-      plans: fallbackPlans,
-    };
-  }
-}
-
-export default async function Home() {
-  const { publishedQuestionCount, simulationCount, essayThemeCount, plans } =
-    await getLandingData();
+export default function Home() {
+  const publishedQuestionCount = 1500;
+  const simulationCount = 1;
+  const essayThemeCount = 2;
 
   const monthlyPlan = plans.find((plan) => plan.billingInterval === "MONTH");
   const annualPlan = plans.find((plan) => plan.billingInterval === "YEAR");
